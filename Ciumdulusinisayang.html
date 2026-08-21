@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>BUAT LIA SAYANG♡</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+		:root{--pink:#ff5f8f;--rose:#ff8faf;--cream:#fff8f4;--ink:#32242a;--muted:#8e727b}
+		*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0d0b10;color:white;font-family:Poppins,sans-serif;overflow-x:hidden}
+		#stars{position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 50% 0,#38202f 0,#110c13 45%,#08070b 100%)}
+		#stars:before,#stars:after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:73px 73px;opacity:.12;animation:drift 18s linear infinite}
+		#stars:after{background-size:121px 121px;opacity:.08;animation-duration:27s;animation-direction:reverse}@keyframes drift{to{transform:translate(73px,73px)}}
+		section{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:70px 20px;position:relative}.wrap{width:min(920px,100%);text-align:center}
+		.badge{display:inline-block;border:1px solid #ffffff28;border-radius:99px;padding:9px 15px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ffc5d5;background:#ffffff08;backdrop-filter:blur(10px)}
+		h1,h2{font-family:'Cormorant Garamond',serif;font-weight:600;margin:18px 0}h1{font-size:clamp(58px,14vw,132px);line-height:.82}h2{font-size:clamp(44px,8vw,82px);line-height:.9}.sub{color:#d9c8ce;max-width:620px;margin:20px auto;line-height:1.9;font-size:15px}.pink{color:#ff91ad}.heart{display:inline-block;animation:beat 1.25s ease-in-out infinite}@keyframes beat{50%{transform:scale(1.25)}}
+		.scroll{position:absolute;bottom:28px;font-size:10px;letter-spacing:3px;color:#a98c95;text-transform:uppercase}.scroll:after{content:"↓";display:block;font-size:18px;margin-top:6px}
+		.card{background:linear-gradient(145deg,#ffffff13,#ffffff06);border:1px solid #ffffff18;border-radius:30px;padding:34px;box-shadow:0 25px 90px #0008;backdrop-filter:blur(18px)}
+		.question{font-family:'Cormorant Garamond',serif;font-size:clamp(35px,7vw,62px);margin:8px}.buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:18px;padding:15px 28px;font:600 14px Poppins;cursor:pointer;transition:.25s}.yes{background:#ff719a;color:white;box-shadow:0 10px 35px #ff719a40}.no{background:#fff;color:#34252b}.btn:hover{transform:translateY(-4px) scale(1.03)}
+		#answer{min-height:24px;margin-top:18px;color:#ffc0d0;font-size:13px}
+		.memories{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}.memory{aspect-ratio:1/1.15;border-radius:22px;padding:20px;display:flex;align-items:flex-end;text-align:left;overflow:hidden;position:relative;background:linear-gradient(145deg,#542c3e,#20151b)}.memory:nth-child(2){background:linear-gradient(145deg,#61354b,#171117)}.memory:nth-child(3){background:linear-gradient(145deg,#3c334c,#171117)}.memory:before{content:"♡";position:absolute;right:18px;top:10px;font-size:52px;color:#ffffff20}.memory b{font-family:'Cormorant Garamond';font-size:28px}.memory small{display:block;color:#d6c0c8;margin-top:5px}.letter{max-width:680px;margin:auto;text-align:left;background:#fffaf7;color:#38282e;border-radius:8px;padding:38px 32px;box-shadow:0 30px 90px #0007;position:relative}.letter:before{content:"";position:absolute;inset:10px;border:1px solid #e8cdd2;pointer-events:none}.letter p{line-height:1.95;font-size:14px}.sign{font-family:'Cormorant Garamond';font-size:31px;text-align:right;margin-top:30px}.music{position:fixed;right:18px;bottom:18px;z-index:10;display:flex;align-items:center;gap:10px;background:#ffffff12;border:1px solid #ffffff22;backdrop-filter:blur(14px);border-radius:99px;padding:8px 12px 8px 8px}.music button{width:42px;height:42px;border:0;border-radius:50%;background:#ff6f99;color:#fff;cursor:pointer;font-size:17px}.music span{font-size:11px;color:#e8d9de}
+		.timeline{display:flex;justify-content:center;align-items:center;gap:0;margin:35px auto;max-width:720px}.line{height:1px;background:#ffffff25;flex:1}.dot{width:13px;height:13px;border-radius:50%;background:#ff769c;box-shadow:0 0 25px #ff769c}.date{margin:0 18px;color:#ffd0db;font-size:13px;letter-spacing:2px}
+		.final{background:radial-gradient(circle at 50% 40%,#4b1d32 0,#170c13 45%,transparent 75%)}.final h2{font-size:clamp(52px,11vw,112px)}.tiny{color:#aa9098;font-size:11px;letter-spacing:1px}.replay{margin-top:25px;background:transparent;color:#ffc3d0;border:1px solid #ffffff25}
+		.float-heart{position:fixed;bottom:-30px;font-size:20px;pointer-events:none;z-index:8;animation:rise 6s linear forwards}@keyframes rise{to{transform:translateY(-110vh) rotate(20deg);opacity:0}}
+		@media(max-width:700px){.memories{grid-template-columns:1fr}.card{padding:25px 18px}.letter{padding:30px 22px}.sub{font-size:14px}.music span{display:none}}
+/* =========================
+   OUR CAPTURE
+========================= */
+.capture-section{
+	overflow:hidden;
+}
+
+.capture-title{
+	margin-bottom:12px;
+}
+
+.capture-sub{
+	max-width:560px;
+	margin:0 auto 35px;
+}
+
+.capture-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:22px;
+	max-width:850px;
+	margin:0 auto;
+}
+
+.capture-card{
+	position:relative;
+	padding:10px 10px 18px;
+	background:#fffaf7;
+	border-radius:5px;
+	box-shadow:
+	0 25px 55px #0009,
+	0 0 0 1px #ffffff20;
+	transform:rotate(-2deg);
+	transition:
+	transform .45s cubic-bezier(.2,.8,.2,1),
+	box-shadow .45s ease;
+	opacity:0;
+	animation:captureAppear .9s ease forwards;
+}
+
+.capture-card:nth-child(2){
+	transform:rotate(2.5deg);
+	animation-delay:.15s;
+}
+
+.capture-card:nth-child(3){
+	transform:rotate(-1deg);
+	animation-delay:.3s;
+}
+
+.capture-card:hover{
+	transform:
+	translateY(-12px)
+	rotate(0deg)
+	scale(1.04);
+	box-shadow:
+	0 35px 80px #000b,
+	0 0 35px #ff719a35;
+	z-index:3;
+}
+
+.capture-photo{
+	width:100%;
+	aspect-ratio:4/5;
+	object-fit:cover;
+	display:block;
+	background:
+	linear-gradient(145deg,#492637,#171016);
+}
+
+.capture-caption{
+	color:#39282e;
+	font-family:'Cormorant Garamond',serif;
+	font-size:23px;
+	font-weight:600;
+	text-align:center;
+	margin-top:12px;
+}
+
+.capture-date{
+	color:#9c7d87;
+	font-family:Poppins,sans-serif;
+	font-size:9px;
+	letter-spacing:2px;
+	text-align:center;
+	text-transform:uppercase;
+	margin-top:2px;
+}
+
+.capture-heart{
+	position:absolute;
+	right:-9px;
+	top:-15px;
+	font-size:28px;
+	color:#ff719a;
+	filter:drop-shadow(0 5px 10px #0005);
+	animation:captureHeart 1.8s ease-in-out infinite;
+}
+
+@keyframes captureAppear{
+	from{
+		opacity:0;
+		transform:translateY(50px) rotate(-6deg);
+	}
+	to{
+		opacity:1;
+	}
+}
+
+@keyframes captureHeart{
+	50%{
+		transform:scale(1.18) rotate(8deg);
+	}
+}
+
+.capture-note{
+	margin:35px auto 0;
+	color:#bda6ae;
+	font-size:11px;
+	letter-spacing:1px;
+}
+
+/* Mobile */
+@media(max-width:700px){
+	.capture-grid{
+		grid-template-columns:1fr;
+		max-width:310px;
+		gap:30px;
+	}
+
+	.capture-card{
+		width:100%;
+	}
+
+	.capture-card:nth-child(1){
+		transform:rotate(-3deg);
+	}
+
+	.capture-card:nth-child(2){
+		transform:rotate(3deg);
+	}
+
+	.capture-card:nth-child(3){
+		transform:rotate(-2deg);
+	}
+}
+
+</style>
+</head>
+<body>
+	<div id="stars"></div>
+	<audio id="music" src="Music.mp3" loop preload="auto"></audio>
+	<div class="music"><button id="musicBtn">♫</button><span id="musicText">musik sayang♡</span></div>
+
+	<section id="home"><div class="wrap">
+		<span class="badge">ucapan spesial cuma buat kamu</span>
+		<h1><span class="pink heart">♡</span>AMELIA<span class="pink heart">♡</span></h1>
+		<p class="sub">Aku bikin sesuatu kecil buat kamu, ngga mewah dan ngga sempurna, tapi setiap bagian di sini aku buat sambil mikirin kamu.</p>
+		<div class="timeline"><div class="line"></div><span class="date">13 MARET 2026</span><div class="line"></div></div>
+		<p class="tiny">scroll-nya pelan-pelan ya sayang</p></div><div class="scroll">our little story</div></section>
+
+		<section><div class="wrap"><div class="card">
+			<span class="badge">satu pertanyaan penting</span>
+			<div class="question">Liaaa, sayang aku nggak? 🥺</div>
+			<p class="sub">dijawab jujur ya sayang</p>
+			<div class="buttons"><button class="btn yes" id="yes">TENTU</button><button class="btn no" id="no">NGGAK DULU</button></div><div id="answer"></div>
+		</div></div></section>
+
+		<section><div class="wrap"><span class="badge">PENTING</span><h2>hal-hal kecil<br><span class="pink">yang aku suka</span></h2><div class="memories">
+			<div class="memory"><div><b>Senyum Kamu</b><small>yang kadang jadi mood booster aku</small></div></div>
+			<div class="memory"><div><b>Cerita Kita</b><small>dari obrolan receh sampai hal-hal yang nggak pernah bisa aku lupa</small></div></div>
+			<div class="memory"><div><b>Kamu</b><small>sesederhana itu. tetap kamu yang paling aku pilih</small></div></div>
+		</div></div></section>
+<!-- =========================
+     OUR CAPTURE
+========================= -->
+<section class="capture-section">
+	<div class="wrap">
+
+		<span class="badge">Sedikit Memori Kita</span>
+
+		<h2 class="capture-title">
+			Foto - Foto <span class="pink">Kita</span>
+		</h2>
+
+		<p class="sub capture-sub">
+			Beberapa momen kecil yang mungkin sederhana,
+			tapi kalau sama kamu rasanya selalu punya cerita sendiri. ♡
+		</p>
+
+		<div class="capture-grid">
+
+			<!-- FOTO 1 -->
+			<div class="capture-card">
+				<span class="capture-heart">♥</span>
+
+				<img
+				src="capture1.jpeg"
+				alt="Our Capture 1"
+				class="capture-photo"
+				>
+
+				<div class="capture-caption">
+					Senyum Kamu
+				</div>
+
+				<div class="capture-date">
+					a little moment with you
+				</div>
+			</div>
+
+			<!-- FOTO 2 -->
+			<div class="capture-card">
+				<span class="capture-heart">♥</span>
+
+				<img
+				src="capture2.jpeg"
+				alt="Our Capture 2"
+				class="capture-photo"
+				>
+
+				<div class="capture-caption">
+					Kita
+				</div>
+
+				<div class="capture-date">
+					my favorite memory
+				</div>
+			</div>
+
+			<!-- FOTO 3 -->
+			<div class="capture-card">
+				<span class="capture-heart">♥</span>
+
+				<img
+				src="capture3.jpeg"
+				alt="Our Capture 3"
+				class="capture-photo"
+				>
+
+				<div class="capture-caption">
+					Selalu Kamu
+				</div>
+
+				<div class="capture-date">
+					forever in my heart
+				</div>
+			</div>
+
+		</div>
+
+		<p class="capture-note">
+			“kalau bisa, aku mau menyimpan semua momen sama kamu.” ♡
+		</p>
+
+	</div>
+</section>
+<section><div class="wrap"><span class="badge">Sepucuk Surat Cinta Untuk Lia</span><h2>Teruntuk Kamu<br><span class="pink">Yang Aku Sayangi</span></h2><div class="letter">
+	<p>Liaaa,</p>
+	<p>Aku nggak tahu harus mulai dari mana. Kadang aku ngerasa kata-kata itu terlalu kecil buat ngejelasin seberapa berharganya kamu buat aku.</p>
+	<p>Aku cuma mau kamu tahu satu hal: <b>aku bersyukur banget bisa kenal kamu.</b> Dari sekian banyak orang di dunia ini, gatau gimana ceritanya aku bisa menemukan seseorang yang bikin aku nyaman jadi diri sendiri.</p>
+	<p>Aku nggak janji semuanya bakal selalu sempurna. Mungkin nanti ada hari di mana kita capek, salah paham, atau sama-sama keras kepala. Tapi kalau boleh pilih, aku tetap mau intropeksi, tetap mau memperbaiki, dan tetap mau jalan bareng kamu.</p>
+	<p>Jadi kalau suatu hari kamu lupa seberapa berarti kamu buat aku, buka lagi  ini ya sayang. Biar tulisan kecil ini ngingetin kamu kalau ada seseorang yang selalu punya tempat khusus buat kamu di hati kamu</p>
+	<div class="sign">Kekasihmu<br><b>Joshua♡</b></div>
+</div></div></section>
+
+<section class="final"><div class="wrap"><span class="badge">Satu Hal Lagi</span><h2>I choose<br><span class="pink">you.</span></h2><p class="sub">Bukan cuma hari ini. Kalau aku masih diberi kesempatan, aku mau terus memilih kamu, lagi dan lagi.</p><p class="tiny">Makasih sayang karna kamu sudah hadir dalam hidup aku dan selalu sabar sama aku yang kaku dan keliatan cuek ke kamu ♡</p><button class="btn replay" onclick="location.href='#home'">Putar Lagi ↺</button></div></section>
+
+<script>
+	const music=document.getElementById('music'), mb=document.getElementById('musicBtn'), mt=document.getElementById('musicText');
+	function playMusic(){music.play().then(()=>{mb.textContent='❚❚';mt.textContent='musik sedang diputar ♡'}).catch(()=>{})}
+	mb.addEventListener('click',()=>{if(music.paused)playMusic();else{music.pause();mb.textContent='♫';mt.textContent='putar musik ♡'}});
+	document.addEventListener('click',e=>{if(e.target.closest('button')||e.target.closest('a')) return; playMusic()},{once:true});
+	const yes=document.getElementById('yes'),no=document.getElementById('no'),ans=document.getElementById('answer');
+	yes.onclick=()=>{ans.textContent='Aku juga sayang banget sama kamu, cini cini cini🤍'; burst(); playMusic()};
+	no.onclick=()=>{ans.textContent='Plisss banget ini mah sayanggg'; no.style.transform=`translate(${Math.random()*180-90}px,${Math.random()*80-40}px)`; playMusic()};
+	function burst(){for(let i=0;i<18;i++){setTimeout(()=>{const h=document.createElement('div');h.className='float-heart';h.textContent=['♡','♥','✨','💗'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(14+Math.random()*22)+'px';h.style.animationDuration=(4+Math.random()*3)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)},i*70)}}
+	setInterval(()=>{if(Math.random()<.35){const h=document.createElement('div');h.className='float-heart';h.textContent='♡';h.style.left=Math.random()*100+'vw';document.body.appendChild(h);setTimeout(()=>h.remove(),6000)}},900);
+</script>
+</body></html>
